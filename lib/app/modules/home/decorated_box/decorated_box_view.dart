@@ -13,10 +13,16 @@ class DecoratedBoxView extends GetView<DecoratedBoxController> {
         title: const Text('DecoratedBoxView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'DecoratedBoxView is working',
-          style: TextStyle(fontSize: 20),
+      body: Center(
+        child: DecoratedBox(
+          decoration: BoxDecoration(
+              shape: BoxShape.rectangle,
+              color: Colors.amber,
+              borderRadius: BorderRadius.circular(2)),
+          child: Container(
+            margin: const EdgeInsets.symmetric(vertical: 2, horizontal: 4),
+            child: const Text("DecoratedBoxView"),
+          ),
         ),
       ),
     );

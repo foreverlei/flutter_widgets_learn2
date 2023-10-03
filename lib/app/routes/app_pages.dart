@@ -18,12 +18,14 @@ class AppPages {
       page: () => const HomeView(),
       binding: HomeBinding(),
       transition: Transition.cupertino,
+      preventDuplicates: true,
       children: [
         GetPage(
           name: _Paths.DECORATED_BOX,
           page: () => const DecoratedBoxView(),
           binding: DecoratedBoxBinding(),
           transition: Transition.cupertino,
+          participatesInRootNavigator: false,
         ),
       ],
     ),

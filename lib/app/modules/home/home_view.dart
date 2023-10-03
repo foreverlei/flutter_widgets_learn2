@@ -16,6 +16,7 @@ class HomeView extends GetView<HomeController> {
     for (var i = 0; i < AppPages.routes.length; ++i) {
       listWidget.add(ElevatedButton(
         onPressed: () {
+          MyLogger.d(AppPages.routes[i].name);
           Get.offAll(AppPages.routes[i].name);
         },
         child: Text(AppPages.routes[i].name),
