@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets_learn2/app/log/my_logger.dart';
 import 'package:flutter_widgets_learn2/app/routes/app_pages.dart';
 
 import 'package:get/get.dart';
@@ -24,6 +25,8 @@ class HomeView extends GetView<HomeController> {
         listWidget.add(ElevatedButton(
           onPressed: () {
             // print(AppPages.routes[i].children[m].name);
+            MyLogger.d(
+                AppPages.routes[i].name + AppPages.routes[i].children[m].name);
             Get.toNamed(
                 AppPages.routes[i].name + AppPages.routes[i].children[m].name);
           },
