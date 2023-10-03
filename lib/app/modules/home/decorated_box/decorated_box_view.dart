@@ -11,6 +11,7 @@ class DecoratedBoxView extends GetView<DecoratedBoxController> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('DecoratedBoxView'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         centerTitle: true,
       ),
       body: Center(

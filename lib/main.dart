@@ -26,7 +26,9 @@ void main() {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        // splashColor: Colors.transparent, // 点击时的高亮效果设置为透明
+        // highlightColor: Colors.transparent, // 长按时的扩散效果设置为透明
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
     ),

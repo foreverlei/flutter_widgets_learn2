@@ -1,4 +1,4 @@
-import 'dart:math';
+// import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets_learn2/app/log/my_logger.dart';
@@ -45,6 +45,7 @@ class HomeView extends GetView<HomeController> {
       appBar: AppBar(
         title: const Text('HomeView'),
         centerTitle: true,
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
@@ -61,6 +62,47 @@ class HomeView extends GetView<HomeController> {
           children: getRouteWidgetsButton(),
         ),
       ),
+      bottomNavigationBar: Obx(
+        () => BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.business),
+              label: 'Business',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.school),
+              label: 'School',
+            ),
+          ],
+          currentIndex: controller.selectedIndex.value,
+          selectedItemColor: Colors.amber[800],
+          onTap: (index) {
+            controller.selectedIndex.value = index;
+            MyLogger.d(index);
+          },
+          enableFeedback: false,
+        ),
+      ),
     );
+    // return GetRouterOutlet.builder(
+    //   builder: (context, delegate, currentRoute) {
+    //     return Scaffold(
+    //       body: Center(
+    //         // child: Text(
+    //         //   'HomeView is working',
+    //         //   style: TextStyle(fontSize: 20),
+    //         // ),
+    //         child: Column(
+    //           children: getRouteWidgetsButton(),
+    //         ),
+    //       ),
+    //       // bottomNavigationBar: IndexedRouteBuilder(),
+    //     );
+    //   },
+    // );
   }
 }
