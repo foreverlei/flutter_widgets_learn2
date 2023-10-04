@@ -1,7 +1,8 @@
 import 'package:get/get.dart';
-
 import '../modules/home/decorated_box/decorated_box_binding.dart';
 import '../modules/home/decorated_box/decorated_box_view.dart';
+import '../modules/home/default_text_style_transition/default_text_style_transition_binding.dart';
+import '../modules/home/default_text_style_transition/default_text_style_transition_view.dart';
 import '../modules/home/home_binding.dart';
 import '../modules/home/home_view.dart';
 
@@ -26,6 +27,12 @@ class AppPages {
           binding: DecoratedBoxBinding(),
           transition: Transition.cupertino,
           participatesInRootNavigator: false,
+        ),
+        GetPage(
+          name: _Paths.DEFAULT_TEXT_STYLE_TRANSITION,
+          page: () => const DefaultTextStyleTransitionView(),
+          binding: DefaultTextStyleTransitionBinding(),
+          transition: Transition.cupertino,
         ),
       ],
     ),

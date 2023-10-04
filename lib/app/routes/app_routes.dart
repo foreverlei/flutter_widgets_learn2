@@ -6,10 +6,13 @@ abstract class Routes {
   static const HOME = _Paths.HOME;
 
   static const DECORATED_BOX = _Paths.HOME + _Paths.DECORATED_BOX;
+  static const DEFAULT_TEXT_STYLE_TRANSITION =
+      _Paths.HOME + _Paths.DEFAULT_TEXT_STYLE_TRANSITION;
 }
 
 abstract class _Paths {
   _Paths._();
   static const HOME = '/home';
   static const DECORATED_BOX = '/decorated-box';
+  static const DEFAULT_TEXT_STYLE_TRANSITION = '/default-text-style-transition';
 }
