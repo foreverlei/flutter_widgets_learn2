@@ -8,6 +8,8 @@ abstract class Routes {
   static const DECORATED_BOX = _Paths.HOME + _Paths.DECORATED_BOX;
   static const DEFAULT_TEXT_STYLE_TRANSITION =
       _Paths.HOME + _Paths.DEFAULT_TEXT_STYLE_TRANSITION;
+  static const CUSTOME_SCROLL_VIEW = _Paths.HOME + _Paths.CUSTOME_SCROLL_VIEW;
+  static const CONTAINER = _Paths.HOME + _Paths.CONTAINER;
 }
 
 abstract class _Paths {
@@ -15,4 +17,6 @@ abstract class _Paths {
   static const HOME = '/home';
   static const DECORATED_BOX = '/decorated-box';
   static const DEFAULT_TEXT_STYLE_TRANSITION = '/default-text-style-transition';
+  static const CUSTOME_SCROLL_VIEW = '/custome-scroll-view';
+  static const CONTAINER = '/container';
 }

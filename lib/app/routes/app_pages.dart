@@ -1,4 +1,9 @@
 import 'package:get/get.dart';
+
+import '../modules/home/container/container_binding.dart';
+import '../modules/home/container/container_view.dart';
+import '../modules/home/custome_scroll_view/custome_scroll_view_binding.dart';
+import '../modules/home/custome_scroll_view/custome_scroll_view_view.dart';
 import '../modules/home/decorated_box/decorated_box_binding.dart';
 import '../modules/home/decorated_box/decorated_box_view.dart';
 import '../modules/home/default_text_style_transition/default_text_style_transition_binding.dart';
@@ -32,6 +37,18 @@ class AppPages {
           name: _Paths.DEFAULT_TEXT_STYLE_TRANSITION,
           page: () => const DefaultTextStyleTransitionView(),
           binding: DefaultTextStyleTransitionBinding(),
+          transition: Transition.cupertino,
+        ),
+        GetPage(
+          name: _Paths.CUSTOME_SCROLL_VIEW,
+          page: () => const CustomeScrollViewView(),
+          binding: CustomeScrollViewBinding(),
+          transition: Transition.cupertino,
+        ),
+        GetPage(
+          name: _Paths.CONTAINER,
+          page: () => const ContainerView(),
+          binding: ContainerBinding(),
           transition: Transition.cupertino,
         ),
       ],

@@ -158,7 +158,8 @@ class DecoratedBoxView extends GetView<DecoratedBoxController> {
               expandedColor: Colors.blue,
               color: Colors.red,
               isExpanded: false,
-            )
+            ),
+            // FadeInImage(placeholder: placeholder, image: image)
           ],
         ),
       ),
